@@ -78,10 +78,18 @@ WSGI_APPLICATION = 'VidVista.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'vidvistadb',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',  # Change this to your MySQL server's host if it's not local
+        'PORT': '3306',  # Change this to your MySQL server's port if it's not the default
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
     }
 }
+
 
 
 # Password validation
