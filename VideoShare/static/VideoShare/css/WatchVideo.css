@@ -1,0 +1,455 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: rgb(6, 6, 6);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: fixed;
+    padding: 10px 80px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0px 4px 6px rgba(65, 50, 50, 0.493);
+}
+
+/* Style for the search container */
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    /* max-width: 400px; */
+    margin: 0 auto;
+    padding: 7px;
+    background-color: #040404;
+    border-radius: 4px;
+}
+
+/* Style for the search input */
+.search-input {
+    flex: 1;
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+    color: white;
+}
+
+/* Style for the search button */
+.search-button {
+    background: #0d0d0e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+nav .logo i {
+    color: rgb(244, 11, 11);
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+nav .logo h2 {
+    color: white;
+    cursor: pointer;
+    font-family: 'YourDesiredFont', sans-serif;
+}
+
+nav .humburger i {
+    background-color: rgb(13, 13, 13);
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 5px 10px;
+    /* Adjust the padding to control the size of the icon */
+    font-size: 24px;
+    /* Adjust the font size to control the icon size */
+    color: #f9f4f4;
+    /* Adjust the color as needed */
+    /* You can also add other styles such as margins, borders, etc. */
+    margin-right: 10px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul .profile {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+nav ul .profile img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0px 20px;
+    position: relative;
+}
+
+nav ul li i {
+    color: white;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: orange;
+    display: block;
+    transition: 0.2s linear;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: rgb(206, 139, 16);
+}
+
+.container1 {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "left right";
+}
+
+.container1 .left {
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.container1 .left .video-container {
+    width: 90%;
+    height: auto;
+    background-color: black;
+    margin-top: 10px;
+    box-shadow: 0px 4px 6px rgba(65, 50, 50, 0.5);
+}
+
+.container1 .left .video-container video {
+    width: 100%;
+    height: 600px;
+    background-color: #0d0d0e;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.container1 .left .video-container .video-title label {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.container1 .left .video-container .videos-action {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.container1 .left .video-container .videos-action i,h4{
+    color: white;
+    cursor: pointer;
+}
+
+.container1 .left .video-container .videos-action i{
+    margin-right: 5px;
+}
+
+.container1 .left .video-container .videos-action .owner-info {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.container1 .left .video-container .videos-action .owner-info .Channel-name{
+    padding-bottom: 10px;
+    text-indent: -1em;
+    margin-left: 1em; /* To ensure the first line is not indented */
+}
+
+.container1 .left .video-container .videos-action .owner-info  .Channel-name a{
+    color: white;
+    text-decoration: none;
+}
+
+.container1 .left .video-container .videos-action .owner-info .Channel-name p{
+    color: white;
+}
+
+.container1 .left .video-container .videos-action .owner-info .video-owner {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.container1 .left .video-container .videos-action .owner-info .video-owner img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container1 .left .more-description{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-wrap: break-word;
+    align-items: flex-start;
+    color: white;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   padding-top: 20px;
+   padding-bottom: 17px;
+}
+
+.container1 .left .more-description h2{
+    color: white;
+    font-family: Gill Sans;
+    font-size: medium;
+
+}
+
+.container1 .left .more-description label{
+    display: block;
+}
+
+.container1 .left .more-description label a{
+    text-decoration: none;
+    color: rgb(55, 55, 195);
+    display: block;
+}
+
+.container1 .left .commebt-container{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container1 .left .commebt-container .action{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.container1 .left .commebt-container .action h2,h4{
+    padding-left: 20px;
+}
+
+.container1 .left .commebt-container .action h4 a{
+    text-decoration: none;
+}
+
+.container1 .left .comments{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.container1 .left .comments .current-user{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.container1 .left .comments .current-user img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.container1 .left .comments .form-container{
+    width: 100%;
+    /* margin-left: 10px; */
+}
+
+.container1 .left .comments .form-container form .form-group  input{
+    width: 100%;
+    padding: 16px 0px 16px 0px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    /* Remove outline on focus */
+    line-height: 22px;
+    margin-bottom: 20px;
+    background: transparent;
+}
+
+.container1 .left .comments .form-container form .form-group1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: end;
+}
+
+.container1 .left .comments .form-container form .form-group1 button{
+    margin-left: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.container1 .left .others-comment{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.container1 .left .others-comment .others-image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+} 
+
+.container1 .left .others-comment .others-image img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+} 
+
+.container1 .left .others-comment .others-message {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    overflow-wrap: break-word;
+}
+
+.container1 .left .others-comment .others-message .action-checkbox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.container1 .left .others-comment .others-message .action-checkbox p,a{
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.container1 .right {
+    grid-area: right;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.container1 .right .video-container1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.container1 .right .video-container1 .video{
+    width: 50%;
+    height: 200px;
+    cursor: pointer;
+}
+
+.container1 .right .video-container1 .video video{
+    width: 100%;
+    height: 200px;
+    cursor: pointer;
+}
+
+.container1 .right .video-container1 .description{
+    width: 50%;
+    height: 200px;
+    cursor: pointer;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.container1 .right .video-container1 .description label,h3,a,p{
+    color:white;
+    margin-top: 20px;
+}
+
+.container1 .right .video-container1 .description label{
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.container1 .right .video-container1 .description a{
+    text-decoration: none;
+    font-size: small;
+}
+
+

@@ -1,0 +1,110 @@
+{% load static %}
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'VideoShare/css/SignUp.css' %}"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/fontawesome.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/brands.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/solid.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="{% static 'VideoShare/js/SignUp.js' %}"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+          <h2><i class="fa-brands fa-youtube"></i>VidVista</h2>
+        </div> 
+    </nav>  
+    <div class = "mycontainer">
+       <div class = "form-container">
+            <h1>Sign Up</h1>
+            <form id="registration-form" method="post" action="{% url 'SignUp' %}">
+              {% csrf_token %}
+            <div class = "form-group">
+              <label>First Name</label>
+              <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter your first name here." >
+              <span id="firstname-error" class="error"></span>
+            </div>
+            <div class = "form-group">
+                <label>Last Name</label>
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter your last name here.">
+                <span id="lastname-error" class="error"></span>
+              </div>
+              <div class = "form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email here.">
+                <span id="email-error" class="error"></span>
+              </div>
+              <div class = "form-group">
+                <label>Phone Number</label>
+                <input type="text" class="form-control" id = "phonenumber" name = "phonenumber" placeholder="Enter your phone number here.">
+                <span id="phonenumber-error" class="error"></span>
+              </div>
+              <div class = "form-group">
+                <label>User Name</label>
+                <input type="text" class="form-control" id = "username" name = "username" placeholder="Enter your user name here.">
+                <span id="username-error" class="error"></span>
+              </div>
+              <div class = "form-group">
+                <label>Gender</label>
+                <select id = "gender" name = "gender">
+                  <option value=""></option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                    <option value="option4">Option 4</option>
+                </select>    
+                <span id="gender-error" class="error"></span>            
+              </div>
+              <div class = "form-group">
+                <label>Age</label>
+                <select id = "age" name="age">
+                  <option value=""></option>
+                    <option value="option1"> 1</option>
+                    <option value="option2"> 2</option>
+                    <option value="option3"> 3</option>
+                    <option value="option4"> 4</option>
+                </select>  
+                <span id="age-error" class="error"></span>                                      
+              </div>
+              <div class = "form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" id = "password" name = "password" placeholder="Enter your Password here.">
+                <span id="password-error" class="error"></span>  
+              </div>
+              <div class = "form-group">
+                <label>Confirm Password</label>
+                <input type="password" class="form-control" id = "confirmpassword" name = "confirmpassword" placeholder="Re-enter your Password here.">
+                <span id="confirmpassword-error" class="error"></span>
+              </div>
+              <div class = "form-group">
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+              </div>
+              <div class="form-group">
+                <p>Go back to login:  <a href="{% url 'SignIn' %}">Sign In</a></p>
+               </div>
+            </form>
+       </div>
+    </div>
+</body>
+</html>

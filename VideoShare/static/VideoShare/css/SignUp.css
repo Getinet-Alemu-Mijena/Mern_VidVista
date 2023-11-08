@@ -1,0 +1,112 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    position: fixed;
+    padding: 10px 80px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0px 4px 6px rgba(65, 50, 50, 0.493);
+}
+
+nav .logo i {
+    color: rgb(244, 11, 11);
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+nav .logo h2 {
+    color: white;
+    cursor: pointer;
+    font-family: 'YourDesiredFont', sans-serif;
+}
+
+.mycontainer {
+    background-color: black;
+    width: 100%;
+    height: auto;
+    margin-top: 65px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.mycontainer .form-container {
+    width: 600px;
+    height: auto;
+    margin-top: 20px;
+    background-color: black;
+    box-shadow: 0 0 10px rgba(111, 91, 91, 0.5);
+    margin-bottom: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 30px;
+}
+
+.mycontainer .form-container h1 {
+    color: wheat;
+    margin-bottom: 20px;
+}
+
+.mycontainer .form-container form {
+    width: 100%;
+    height: auto;
+}
+
+.mycontainer .form-container form .form-group label {
+    display: block;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.mycontainer .form-container form .form-group .error{
+    color: red;
+}
+
+.mycontainer .form-container form .form-group input,select {
+    width: 90%;
+    padding: 16px 0px 16px 0px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    /* Remove outline on focus */
+    line-height: 22px;
+}
+select {
+    cursor: pointer;
+}
+
+.mycontainer .form-container form .form-group p{
+    color: white;
+}
+
+.mycontainer .form-container form .form-group p a{
+    color: brown;
+    text-decoration: none;
+}
+
+

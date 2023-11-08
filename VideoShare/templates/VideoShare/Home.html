@@ -1,0 +1,301 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'VideoShare/css/Home.css' %}"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/fontawesome.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/brands.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/solid.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="humburger"><i class="fas fa-bars" onclick = "" ></i></div>
+      <div class="logo">
+        <h2><i class="fa-brands fa-youtube"></i>VidVista</h2>
+      </div>
+
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search..." />
+        <button type="submit" class="search-button">Search</button>
+      </div>
+
+      <div class="link_container">
+        <ul>
+          <li>
+            <a href="#"><i class="fas fa-microphone"></i> Search width Your voice.</a>
+          </li>
+          <li><a href="#"><i class="fas fa-film"></i>
+            Create</a></li>
+          <li><a href="#"><i class="fas fa-bell"></i>Notification</a></li>
+          <div class = "profile">
+            <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
+          </div>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="left-side">
+        <ul>
+          <li><i class="fas fa-home"></i><a href="#">Home</a></li>
+          <li><i class="fas fa-video"></i><a href="#">Shorts</a></li>
+          <li><i class="fas fa-video"></i><a href="#">Subscription</a></li>
+        </ul>
+        <hr />
+        <a href="#"><label>You ></label></a>
+        <ul>
+          <li><i class="fas fa-user"></i><a href="#">Your Channel</a></li>
+          <li><i class="fas fa-history"></i><a href="#">History</a></li>
+          <li><i class="fas fa-video"></i><a href="#">Your Videos</a></li>
+          <li><i class="fas fa-clock"></i><a href="#">Watch Later</a></li>
+          <li><i class="fas fa-thumbs-up"></i><a href="#">Liked Videos</a></li>
+        </ul>
+        <hr />
+        <a href="#"><label>Subscriptions</label></a>
+        <ul>
+          <li><i class="fas fa-home"></i><a href="#">Channel1</a></li>
+          <li><i class="fas fa-home"></i><a href="#">Channel2</a></li>
+          <li><i class="fas fa-home"></i><a href="#">Channel3</a></li>
+          <li><i class="fas fa-home"></i><a href="#">Channel4</a></li>
+          <li><i class="fas fa-home"></i><a href="#">Channel5</a></li>
+        </ul>
+        <hr />
+        <a href="#"><label>Explore</label></a>
+        <ul>
+          <li><i class="fas fa-fire"></i><a href="#">Trending</a></li>
+          <li><i class="fas fa-music"></i><a href="#">Music</a></li>
+          <li><i class="fas fa-video"></i><a href="#">Live</a></li>
+          <li><i class="fas fa-gamepad"></i><a href="#">Gaming</a></li>
+          <li><i class="fas fa-newspaper"></i><a href="#">News</a></li>
+          <li><i class="fas fa-football-ball"></i><a href="#">Sports</a></li>
+          <li><i class="fas fa-graduation-cap"></i><a href="#">Learning</a></li>
+          <li><i class="fas fa-tshirt"></i><a href="#">Fashion & Beauty</a></li>
+        </ul>
+        <hr />
+        <a href="#"><label>More from you tube.</label></a>
+        <ul>
+          <li><i class="fas fa-question-circle"></i><a href="#">Help</a></li>
+          <li><i class="fas fa-comment-alt"></i><a href="#">Feedback</a></li>
+          <li><i class="fas fa-flag"></i><a href="#">Report History</a></li>
+          <li><i class="fas fa-cog"></i><a href="#">Settings</a></li>
+        </ul>
+        <hr />
+      </div>
+      <div class="right-side">
+         <div class="navigation">
+          <button>All</button>
+          <button>Mixes</button>
+          <button>Man city F.C</button> 
+          <button>Sport leags</button>
+          <button>Music of Ethiopia</button>
+          <button>Mixes</button>
+          <button>Man city F.C</button>
+          <button>Sport leags</button>
+          <button>Music of Ethiopia</button>
+          <button>Mixes</button>
+          <button>Man city F.C</button>
+          <button>Sport leags</button>
+          <button>Music of Ethiopia</button>
+          <button>Man city F.C</button>
+          <button>Sport leags</button>
+          <button>Music of Ethiopia</button>
+          <button>Mixes</button>
+          <button>Man city F.C</button>
+          <button>Sport leags</button>
+          <button>Music of Ethiopia</button>
+        </div>  
+        <hr />
+        <div class="sub-container">
+          <div class="video-container">
+            <video width="640" height="360" controls>
+              <source src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-description">
+
+              <div class="user-photo">
+                <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
+              </div>
+
+              <div class="video-detail">
+
+                <a href="#">
+                  <h2>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </h2></a>
+                <a href="#">
+                  <p>Channel</p>
+                </a>
+                <a href="#">
+                  <p>75K views 19 hours ago</p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="video-container">
+            <video width="640" height="360" controls>
+              <source src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-description">
+
+              <div class="user-photo">
+                <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
+              </div>
+
+              <div class="video-detail">
+
+                <a href="#">
+                  <h2>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </h2></a>
+                <a href="#">
+                  <p>Channel</p>
+                </a>
+                <a href="#">
+                  <p>75K views 19 hours ago</p>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+          <div class="video-container">
+            <video width="640" height="360" controls>
+              <source src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-description">
+
+              <div class="user-photo">
+                <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
+              </div>
+
+              <div class="video-detail">
+
+                <a href="#">
+                  <h2>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </h2></a>
+                <a href="#">
+                  <p>Channel</p>
+                </a>
+                <a href="#">
+                  <p>75K views 19 hours ago</p>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+          <div class="video-container">
+            <video width="640" height="360" controls>
+              <source src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-description">
+
+              <div class="user-photo">
+                <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
+              </div>
+
+              <div class="video-detail">
+
+                <a href="#">
+                  <h2>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </h2></a>
+                <a href="#">
+                  <p>Channel</p>
+                </a>
+                <a href="#">
+                  <p>75K views 19 hours ago</p>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+          <div class="video-container">
+            <video width="640" height="360" controls>
+              <source src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-description">
+
+              <div class="user-photo">
+                <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
+              </div>
+
+              <div class="video-detail">
+
+                <a href="#">
+                  <h2>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </h2></a>
+                <a href="#">
+                  <p>Channel</p>
+                </a>
+                <a href="#">
+                  <p>75K views 19 hours ago</p>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+          <div class="video-container">
+            <video width="640" height="360" controls>
+              <source src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-description">
+
+              <div class="user-photo">
+                <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
+              </div>
+
+              <div class="video-detail">
+
+                <a href="#">
+                  <h2>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </h2></a>
+                <a href="#">
+                  <p>Channel</p>
+                </a>
+                <a href="#">
+                  <p>75K views 19 hours ago</p>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'VideoShare/js/Home.js' %}"></script>
+  </body>
+</html>

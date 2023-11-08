@@ -1,0 +1,441 @@
+{% load static %} {% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WatchVideo</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'VideoShare/css/WatchVideo.css' %}"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/fontawesome.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/brands.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/solid.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="humburger"><i class="fas fa-bars" onclick=""></i></div>
+      <div class="logo">
+        <h2><i class="fa-brands fa-youtube"></i>VidVista</h2>
+      </div>
+
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search..." />
+        <button type="submit" class="search-button">Search</button>
+      </div>
+
+      <div class="link_container">
+        <ul>
+          <li>
+            <a href="#"
+              ><i class="fas fa-microphone"></i> Search width Your voice.</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-film"></i> Create</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-bell"></i>Notification</a>
+          </li>
+          <div class="profile">
+            <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
+          </div>
+        </ul>
+      </div>
+    </nav>
+    {% comment %} container {% endcomment %}
+    <div class="container1">
+      {% comment %} left container {% endcomment %}
+      <div class="left">
+        <div class="video-container">
+          <video width="640" height="360" controls>
+            <source
+              src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-title">
+            <label>47. Telephoning</label>
+          </div>
+          <div class="videos-action">
+            <div class="owner-info">
+              {% comment %} <a href="#"> {% endcomment %}
+                <div class="video-owner">
+                  <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
+                </div>
+              {% comment %} </a> {% endcomment %}
+              <div class="Channel-name">
+                <h3><a href="#">Maraki English with abi Create</a></h3>
+                <p>418K subscribers</p>
+              </div>
+            </div>
+            <div>
+              <h4>16k <i class="fas fa-thumbs-up"></i> Like</h4>
+            </div>
+            <div>
+              <h4>16k <i class="fas fa-thumbs-down"></i> Dislike</h4>
+            </div>
+            <div>
+              <h4><i class="fas fa-rss"></i> Subscribe</h4>
+            </div>
+            <div>
+              <h4><i class="fas fa-share"></i> Share</h4>
+            </div>
+            <div>
+              <h4><i class="fas fa-download"></i> Download</h4>
+            </div>
+            <div>
+              <h4><i class="fas fa-ellipsis-h"></i> More</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="more-description">
+          <h2>2,333,444 views Oct 29, 2023</h2>
+          <p>
+            Pep Guardiola's Full Press Conference from Old Trafford as goals
+            from Haaland and Foden secured three points in the Premier League
+            against Manchester United.
+          </p>
+          <label>
+            Subscribe:
+            <a href="#"> http://www.mancity.com </a>
+            <a href="#"> http://www.mancity.com </a>
+            <a href="#"> http://www.mancity.com </a>
+
+            <a href="#"> http://www.mancity.com </a>
+            <a href="#"> http://www.mancity.com </a>
+          </label>
+          <label>About the Official Man City YouTube Channel:</label>
+          <p>
+            Here you will find all the latest videos from Manchester City,
+            including, all Premier League, Champions League, FA Cup and League
+            Cup goals, highlights, behind-the-scenes footage, training and much
+            more. Get closer to the likes of Jack Grealish, Bunny Shaw, Kevin De
+            Bruyne, Lauren Hemp, Erling Haaland, Ellie Roebuck, Phil Foden, Esme
+            Morgan and the rest of Pep Guardiola & Gareth Taylor's teams!
+          </p>
+          <label> <a href="#">See less!</a></label>
+          <label> <a href="#">See more!</a></label>
+        </div>
+        <div class="commebt-container">
+          <div class="action">
+            <h2><i class="fas fa-comment"></i> 64 Comments</h2>
+            <h4><i class="fas fa-sort"></i> <a href="#"> Sort by:</a></h4>
+          </div>
+        </div>
+        <div class="comments">
+          <div class="current-user">
+            <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
+          </div>
+          <div class="form-container">
+            <form id="login-form" method="post" action="{% url 'SignIn' %}">
+              {% csrf_token %}
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  name="username"
+                  placeholder="Add a comment here."
+                />
+              </div>
+              <div class="form-group1">
+                <button type="submit" class="btn btn-secondary">Cancel</button>
+                <button type="submit" class="btn btn-secondary">Comment</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="others-comment">
+          <div class="others-image">
+            <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
+          </div>
+          <div class="others-message">
+            <h3>
+              @davekika7394
+              <p>6 hours ago</p>
+            </h3>
+            <p>
+              Here you will find all the latest videos from Manchester City,
+              including, all Premier League, Champions League, FA Cup and League
+              Cup goals, highlights, behind-the-scenes footage, training and
+              much more. Get closer to the likes of Jack Grealish, Bunny Shaw,
+              Kevin De Bruyne, Lauren Hemp, Erling Haaland, Ellie Roebuck, Phil
+              Foden, Esme Morgan and the rest of Pep Guardiola Gareth Taylor's
+              teams!
+            </p>
+            <div class="action-checkbox">
+              <p><i class="fas fa-sort"></i>12k Like</p>
+              <p><i class="fas fa-sort"></i>12k Dislike</p>
+              <a href="#">Replay</a>
+            </div>
+          </div>
+        </div>
+        <div class="others-comment">
+          <div class="others-image">
+            <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
+          </div>
+          <div class="others-message">
+            <h3>
+              @davekika7394
+              <p>6 hours ago</p>
+            </h3>
+            <p>
+              Here you will find all the latest videos from Manchester City,
+              including, all Premier League, Champions League, FA Cup and League
+              Cup goals, highlights, behind-the-scenes footage, training and
+              much more. Get closer to the likes of Jack Grealish, Bunny Shaw,
+              Kevin De Bruyne, Lauren Hemp, Erling Haaland, Ellie Roebuck, Phil
+              Foden, Esme Morgan and the rest of Pep Guardiola Gareth Taylor's
+              teams!
+            </p>
+            <div class="action-checkbox">
+              <p><i class="fas fa-sort"></i>12k Like</p>
+              <p><i class="fas fa-sort"></i>12k Dislike</p>
+              <a href="#">Replay</a>
+            </div>
+          </div>
+        </div>
+        <div class="others-comment">
+          <div class="others-image">
+            <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
+          </div>
+          <div class="others-message">
+            <h3>
+              @davekika7394
+              <p>6 hours ago</p>
+            </h3>
+            <p>
+              Here you will find all the latest videos from Manchester City,
+              including, all Premier League, Champions League, FA Cup and League
+              Cup goals, highlights, behind-the-scenes footage, training and
+              much more. Get closer to the likes of Jack Grealish, Bunny Shaw,
+              Kevin De Bruyne, Lauren Hemp, Erling Haaland, Ellie Roebuck, Phil
+              Foden, Esme Morgan and the rest of Pep Guardiola Gareth Taylor's
+              teams!
+            </p>
+            <div class="action-checkbox">
+              <p><i class="fas fa-sort"></i>12k Like</p>
+              <p><i class="fas fa-sort"></i>12k Dislike</p>
+              <a href="#">Replay</a>
+            </div>
+          </div>
+        </div>
+        <div class="others-comment">
+          <div class="others-image">
+            <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
+          </div>
+          <div class="others-message">
+            <h3>
+              @davekika7394
+              <p>6 hours ago</p>
+            </h3>
+            <p>
+              Here you will find all the latest videos from Manchester City,
+              including, all Premier League, Champions League, FA Cup and League
+              Cup goals, highlights, behind-the-scenes footage, training and
+              much more. Get closer to the likes of Jack Grealish, Bunny Shaw,
+              Kevin De Bruyne, Lauren Hemp, Erling Haaland, Ellie Roebuck, Phil
+              Foden, Esme Morgan and the rest of Pep Guardiola Gareth Taylor's
+              teams!
+            </p>
+            <div class="action-checkbox">
+              <p><i class="fas fa-sort"></i>12k Like</p>
+              <p><i class="fas fa-sort"></i>12k Dislike</p>
+              <a href="#">Replay</a>
+            </div>
+          </div>
+        </div>
+      </div>
+{% comment %} right container {% endcomment %}
+      <div class="right">
+        <div class="video-container1">
+          <div class="video">
+            <video width="640" height="360" controls>
+              <source
+                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="description">
+            <label>Your browser does not support the video tag.</label>
+            <h3><a href="#">Maraki English with abi Create</a></h3>
+            <p>418K subscribers</p>
+          </div>
+        </div>
+        <div class="video-container1">
+          <div class="video">
+            <video width="640" height="360" controls>
+              <source
+                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="description">
+            <label>Your browser does not support the video tag.</label>
+            <h3><a href="#">Maraki English with abi Create</a></h3>
+            <p>418K subscribers</p>
+          </div>
+        </div>
+        <div class="video-container1">
+          <div class="video">
+            <video width="640" height="360" controls>
+              <source
+                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="description">
+            <label>Your browser does not support the video tag.</label>
+            <h3><a href="#">Maraki English with abi Create</a></h3>
+            <p>418K subscribers</p>
+          </div>
+        </div>
+        <div class="video-container1">
+          <div class="video">
+            <video width="640" height="360" controls>
+              <source
+                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="description">
+            <label>Your browser does not support the video tag.</label>
+            <h3><a href="#">Maraki English with abi Create</a></h3>
+            <p>418K subscribers</p>
+          </div>
+        </div>
+        <div class="video-container1">
+          <div class="video">
+            <video width="640" height="360" controls>
+              <source
+                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="description">
+            <label>Your browser does not support the video tag.</label>
+            <h3><a href="#">Maraki English with abi Create</a></h3>
+            <p>418K subscribers</p>
+          </div>
+        </div>
+        <div class="video-container1">
+          <div class="video">
+            <video width="640" height="360" controls>
+              <source
+                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="description">
+            <label>Your browser does not support the video tag.</label>
+            <h3><a href="#">Maraki English with abi Create</a></h3>
+            <p>418K subscribers</p>
+          </div>
+        </div>
+        <div class="video-container1">
+          <div class="video">
+            <video width="640" height="360" controls>
+              <source
+                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="description">
+            <label>Your browser does not support the video tag.</label>
+            <h3><a href="#">Maraki English with abi Create</a></h3>
+            <p>418K subscribers</p>
+          </div>
+        </div>
+        <div class="video-container1">
+          <div class="video">
+            <video width="640" height="360" controls>
+              <source
+                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="description">
+            <label>Your browser does not support the video tag.</label>
+            <h3><a href="#">Maraki English with abi Create</a></h3>
+            <p>418K subscribers</p>
+          </div>
+        </div>
+        <div class="video-container1">
+          <div class="video">
+            <video width="640" height="360" controls>
+              <source
+                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="description">
+            <label>Your browser does not support the video tag.</label>
+            <h3><a href="#">Maraki English with abi Create</a></h3>
+            <p>418K subscribers</p>
+          </div>
+        </div>
+        <div class="video-container1">
+          <div class="video">
+            <video width="640" height="360" controls>
+              <source
+                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="description">
+            <label>Your browser does not support the video tag.</label>
+            <h3><a href="#">Maraki English with abi Create</a></h3>
+            <p>418K subscribers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

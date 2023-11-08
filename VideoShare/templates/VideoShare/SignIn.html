@@ -1,0 +1,78 @@
+{% load static %} {% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignIn</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'VideoShare/css/SignIn.css' %}"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/fontawesome.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/brands.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/solid.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="{% static 'VideoShare/js/SignIn.js' %}"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <h2><i class="fa-brands fa-youtube"></i>VidVista</h2>
+      </div>
+    </nav>
+    <div class="mycontainer">
+      <div class="form-container">
+        <h1>Sign In</h1>
+        <form id="login-form" method="post" action="{% url 'SignIn' %}">
+          {% csrf_token %}
+          <div class="form-group">
+            <label>User Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id = "username"
+              name = "username"
+              placeholder="Enter your user name here."
+            />
+            <span id="username-error" class="error"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id = "password"
+              name = "password"
+              placeholder="Enter your Password here."
+            />
+            <span id="password-error" class="error"></span>
+          </div>
+          <div class="form-group">
+            <button type = "submit" class="btn btn-secondary">Sign In</button>
+          </div>
+          <div class="form-group">
+           <p>Don't have an account? <a href="{% url 'SignUp' %}">Sign Up</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

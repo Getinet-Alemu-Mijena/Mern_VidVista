@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  nav {
+    background-color: rgb(6, 6, 6);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: fixed;
+    padding: 10px 80px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0px 4px 6px rgba(65, 50, 50, 0.493);
+  }
+  
+  /* Style for the search container */
+  .search-container {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    /* max-width: 400px; */
+    margin: 0 auto;
+    padding: 7px;
+    background-color: #040404;
+    border-radius: 4px;
+  }
+  
+  /* Style for the search input */
+  .search-input {
+    flex: 1;
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+    color: white;
+  }
+  
+  /* Style for the search button */
+  .search-button {
+    background: #0d0d0e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  nav .logo i {
+    color: rgb(244, 11, 11);
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  
+  nav .logo h2 {
+    color: white;
+    cursor: pointer;
+    font-family: 'YourDesiredFont', sans-serif;
+  }
+  
+  nav .humburger i {
+    background-color: rgb(13, 13, 13);
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 5px 10px;
+    /* Adjust the padding to control the size of the icon */
+    font-size: 24px;
+    /* Adjust the font size to control the icon size */
+    color: #f9f4f4;
+    /* Adjust the color as needed */
+    /* You can also add other styles such as margins, borders, etc. */
+    margin-right: 10px;
+  }
+  
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  nav ul .profile {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: black;
+  }
+  
+  nav ul .profile img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  nav ul li {
+    list-style: none;
+    padding: 0px 20px;
+    position: relative;
+  }
+  
+  nav ul li i {
+    color: white;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: orange;
+    display: block;
+    transition: 0.2s linear;
+  }
+  
+  nav ul li a:hover::after {
+    width: 100%;
+  }
+  
+  nav ul li a:hover {
+    color: rgb(206, 139, 16);
+  }
+  
+  .container {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "left right";
+  }
+  
+  .container .left-side {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    grid-area: left;
+    position: fixed;
+    left: 0;
+    max-height: 100vh;
+    overflow-y: scroll;
+  }
+  
+  .container .left-side::-webkit-scrollbar {
+    background-color: #0d0d0e;
+    width: 8px;
+  }
+  
+  .container .left-side::-webkit-scrollbar-thumb {
+    background: rgb(148, 148, 162);
+    /* color of the thumb */
+    border-radius: 12px;
+  }
+  
+  .container .left-side::-webkit-scrollbar-track {
+    background: black;
+    /* color of the track */
+    border-radius: 12px;
+  }
+  
+  .container .left-side li {
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+  
+  .container .left-side li i {
+    margin-right: 15px;
+    color: white;
+    marker-start: initial;
+  }
+  
+  /* @media screen and (max-width: 676px) {
+      .container .left-side {
+        display: none;
+      }
+    } */
+  
+  .container .left-side li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .container .left-side hr {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+    border: 1px solid grey;
+    margin-left: 20px;
+  }
+  
+  .container .left-side a label {
+    color: white;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .container .right-side {
+    background-color: black;
+    grid-area: right;
+  }
+  
+  .container .right-side .navigation {
+    height: 40px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    color: white;
+    max-width: 200vh;
+    overflow-x: scroll;
+  }
+  
+  .container .right-side .navigation::-webkit-scrollbar {
+    background-color: black;
+    width: 2px;
+  }
+  
+  .container .right-side .navigation::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+    border-radius: 12px;
+  }
+  
+  .container .right-side .navigation::-webkit-scrollbar-track {
+    background: black;
+    /* color of the track */
+    border-radius: 12px;
+  }
+  
+  .container .right-side .navigation button {
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: rgb(5, 5, 5);
+    cursor: pointer;
+    border-radius: 12px;
+    margin: 0px 10px 0px 10px;
+    white-space: nowrap;
+    color: white;
+    font-size: smaller;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .container .right-side hr {
+    width: 100%;
+    border: 1px solid grey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .container .right-side .sub-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .container .right-side .sub-container .video-container {
+    width: 400px;
+    height: auto;
+    background-color: rgb(15, 15, 15);
+    margin: 10px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(65, 50, 50, 0.5);
+  }
+  
+  .container .right-side .sub-container .video-container video {
+    width: 400px;
+    height: 300px;
+    border-radius: 12px;
+    cursor: pointer;
+    outline: none;
+    /* Remove the default focus outline */
+  }
+  
+  
+  .container .right-side .sub-container .video-container video:hover {
+    transform: scale(1.05);
+    /* Zoom in the video on hover */
+    transition: transform 0.2s ease;
+    /* Smooth transition */
+  }
+  
+  .container .right-side .sub-container .video-container video::-webkit-media-controls {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black background for video controls */
+    color: white;
+    /* Control icons color */
+    border-radius: 8px;
+    padding: 5px;
+  }
+  
+  .container .right-side .sub-container .video-container video::-webkit-media-controls-play-button,
+  .container .right-side .sub-container .video-container video::-webkit-media-controls-pause-button {
+    border-radius: 50%;
+    padding: 5px;
+  }
+  
+  .container .right-side .sub-container .video-container video::-webkit-media-controls-volume-slider-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Semi-transparent background for volume slider */
+    border-radius: 4px;
+    padding: 2px;
+  }
+  
+  .container .right-side .sub-container .video-container .video-description {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  
+  .container .right-side .sub-container .video-container .video-description .user-photo {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: black;
+  }
+  
+  .container .right-side .sub-container .video-container .video-description .user-photo img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .container .right-side .sub-container .video-container .video-description .video-detail {
+    width: 80%;
+    height: auto;
+    border-bottom-right-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    overflow: hidden;
+    color: white;
+  }
+  
+  .container .right-side .sub-container .video-container .video-description .video-detail a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .container .right-side .sub-container .video-container .video-description .video-detail a h2 {
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-weight: bolder;
+  }
+  
+  .container .right-side .sub-container .video-container .video-description .video-detail a p {
+    font-size: small;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+  }

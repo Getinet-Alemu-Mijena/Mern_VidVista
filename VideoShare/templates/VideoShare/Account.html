@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'VideoShare/css/Account.css' %}"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/fontawesome.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/brands.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/solid.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="humburger"><i class="fas fa-bars" onclick = "" ></i></div>
+      <div class="logo">
+        <h2><i class="fa-brands fa-youtube"></i>VidVista</h2>
+      </div>
+
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search..." />
+        <button type="submit" class="search-button">Search</button>
+      </div>
+
+      <div class="link_container">
+        <ul>
+          <li>
+            <a href="#"><i class="fas fa-microphone"></i> Search width Your voice.</a>
+          </li>
+          <li><a href="#"><i class="fas fa-film"></i>
+            Create</a></li>
+          <li><a href="#"><i class="fas fa-bell"></i>Notification</a></li>
+          <div class = "profile">
+            <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
+          </div>
+        </ul>
+      </div>
+    </nav>
+<div class = "container1">
+    <div class = "left">
+        <h2>Settings</h2>
+        <a href="#">Account</a>
+        <a href="#">Notifications</a>
+        <a href="#"> Playback and performance</a>
+        <a href="#">Downloads</a>
+        <a href="#">Privacy</a>
+        <a href="#">Connected apps</a>
+        <a href="#"> Billing and payments</a>
+        <a href="#">Advanced settings</a>
+
+    </div>
+    <div class = "right">
+        <h1>Account</h1>
+     <h2>Choose how you appear and what you see on YouTube</h2>
+     {% comment %} <p>
+This is your public presence on VidVista. You need a channel to upload your own videos, comment on videos, or create playlists.
+     </p> {% endcomment %}
+     <p>
+        Signed in as alemuamanuel55@gmail.com
+             </p>
+             <hr>
+             <h2>Your YouTube channel</h2>
+             <p>This is your public presence on YouTube. You need a channel to upload your own videos, comment on videos, or create playlists.
+            </p>
+
+            <div class = "channel-container">
+                <div class = "sub-channel">
+                    <h3>Your channel</h3>
+                </div>
+                <div class = "sub-channel-container">
+                    <div class = "channel-owner">
+                        <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
+                    </div>
+                    <div class = "channel-name">
+                        <h3>My channel</h3>
+                    </div>
+                    {% comment %} <h2>Your VidVista channelYour VidVista VidVista YouTube channelYour VidVista channel</h2> {% endcomment %}
+                </div>
+            </div>
+    </div>
+</div>
+
+       {% comment %} <script src="{% static 'VideoShare/js/Account.js' %}"></script> {% endcomment %}
+  </body>
+</html>
