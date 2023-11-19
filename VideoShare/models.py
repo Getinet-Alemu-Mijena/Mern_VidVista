@@ -22,7 +22,7 @@ class Account(models.Model):
 
     Gender = models.CharField(max_length=20, choices=GENDER_CHOICES)
     Age = models.CharField(max_length=20, choices=AGE_CHOICES, default='under18')
-    Password = models.CharField(max_length=20)
+    Password = models.CharField(max_length=128)
 
     class Meta:
         db_table = 'account'

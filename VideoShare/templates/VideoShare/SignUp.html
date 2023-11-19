@@ -40,6 +40,14 @@
             <h1>Sign Up</h1>
             <form id="registration-form" method="post" action="{% url 'SignUp' %}">
               {% csrf_token %}
+              <!-- Display error messages -->
+              {% if messages %}
+                <div class="alert alert-danger">
+                  {% for message in messages %}
+                    {{ message }}
+                  {% endfor %}
+                </div>
+              {% endif %}
             <div class = "form-group">
               <label>First Name</label>
               <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter your first name here." >
