@@ -12,7 +12,7 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     position: fixed;
-    padding: 10px 80px;
+    padding: 1px 60px;
     top: 0;
     left: 0;
     right: 0;
@@ -28,7 +28,7 @@
     /* max-width: 400px; */
     margin: 0 auto;
     padding: 7px;
-    background-color: #040404;
+    background-color: black;
     border-radius: 4px;
   }
   
@@ -45,7 +45,7 @@
   
   /* Style for the search button */
   .search-button {
-    background: #0d0d0e;
+    background: black;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -114,7 +114,7 @@
     text-decoration: none;
   }
   
-  nav ul li a::after {
+  /* nav ul li a::after {
     content: '';
     width: 0;
     height: 2px;
@@ -129,13 +129,26 @@
   
   nav ul li a:hover {
     color: rgb(206, 139, 16);
-  }
+  } */
   
+  .nav ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a i {
+    margin-bottom: 5px; /* Adjust as needed */
+}
+
   .container {
     width: 100%;
     height: auto;
     background-color: black;
-    margin-top: 70px;
+    margin-top: 52px;
     display: grid;
     grid-template-columns: 15% 85%;
     grid-template-rows: 1fr;
@@ -153,6 +166,13 @@
     left: 0;
     max-height: 100vh;
     overflow-y: scroll;
+    z-index: 50;
+  }
+
+  @media screen and (max-width: 676px){
+    .container .left-side{
+      display: none;
+    }
   }
   
   .container .left-side::-webkit-scrollbar {
@@ -223,13 +243,44 @@
     grid-area: right;
   }
 
+  .container .create-video{
+    width: 200px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 60px;
+    z-index: 23;
+    display: none;
+  }
+
+  .container .create-video .flex-item{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin: 10px;
+  }
+
+  .container .create-video .flex-item i{
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  .container .create-video .flex-item a{
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+
   .container .absolute-right{
     width: 25%;
     height: 100vh;
     background-color: black;
     position: absolute;
     right: 0;
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -400,25 +451,35 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    /* background-color: aqua; */
   }
   
   .container .right-side .sub-container .video-container {
-    width: 400px;
+    width: 30%;
     height: auto;
     background-color: rgb(15, 15, 15);
-    margin: 10px;
+    margin: 20px; 
     border-radius: 12px;
     box-shadow: 0px 4px 6px rgba(65, 50, 50, 0.5);
+    /* background-color: #f9f4f4; */
   }
   
-  .container .right-side .sub-container .video-container video {
-    width: 400px;
+  .container .right-side .sub-container .video-container .thumbnail {
+    width: 100%;
     height: 300px;
     border-radius: 12px;
     cursor: pointer;
     outline: none;
     /* Remove the default focus outline */
+  }
+
+  .container .right-side .sub-container .video-container .thumbnail img{
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    cursor: pointer;
+    outline: none;
   }
   
   
@@ -459,16 +520,17 @@
   }
   
   .container .right-side .sub-container .video-container .video-description .user-photo {
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     cursor: pointer;
     background-color: black;
+    margin: 20px;
   }
   
   .container .right-side .sub-container .video-container .video-description .user-photo img {
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     cursor: pointer;
   }

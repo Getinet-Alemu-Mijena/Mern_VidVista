@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: rgb(6, 6, 6);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: fixed;
+    padding: 1px 60px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0px 4px 6px rgba(65, 50, 50, 0.493);
+}
+
+/* Style for the search container */
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    /* max-width: 400px; */
+    margin: 0 auto;
+    padding: 7px;
+    background-color: black;
+    border-radius: 4px;
+}
+
+/* Style for the search input */
+.search-input {
+    flex: 1;
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+    color: white;
+}
+
+/* Style for the search button */
+.search-button {
+    background: black;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+nav .logo i {
+    color: rgb(244, 11, 11);
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+nav .logo h2 {
+    color: white;
+    cursor: pointer;
+    font-family: 'YourDesiredFont', sans-serif;
+}
+
+nav .humburger i {
+    background-color: rgb(13, 13, 13);
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 5px 10px;
+    /* Adjust the padding to control the size of the icon */
+    font-size: 24px;
+    /* Adjust the font size to control the icon size */
+    color: #f9f4f4;
+    /* Adjust the color as needed */
+    /* You can also add other styles such as margins, borders, etc. */
+    margin-right: 10px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul .profile {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+nav ul .profile img {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0px 20px;
+    position: relative;
+}
+
+nav ul li i {
+    color: white;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: orange;
+    display: block;
+    transition: 0.2s linear;
+  }
+  
+  nav ul li a:hover::after {
+    width: 100%;
+  }
+  
+  nav ul li a:hover {
+    color: rgb(206, 139, 16);
+  } */
+
+.nav ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    margin-top: 52px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.container .video-upload-container {
+    width: 80%;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    margin: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(243, 235, 235, 0.1);
+}
+
+.container .video-upload-container form{
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.container .video-upload-container form .left{
+    width: 50%;
+    height: auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.container .video-upload-container form .left .form-group label{
+    color: white;
+    font-family: Verdana;
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.container .video-upload-container form .left .form-group input[type="file"]{
+    width: 95%;
+      padding: 10px;
+      margin: 5px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      cursor: pointer;
+}
+
+.container .video-upload-container form .left  .form-group input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+  }
+
+  .container .video-upload-container form .left .form-group textarea{
+    width: 95%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: vertical; /* Allow vertical resizing of the textarea */
+  }
+
+  .container .video-upload-container form .right .form-group label{
+    color: white;
+    font-family: Verdana;
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.container .video-upload-container form .right{
+    width: 50%;
+    height: auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+  .container .video-upload-container form .right .form-group select{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+  }
+
+  .container .video-upload-container form .right  .form-group input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+  }
+
+  .container .video-upload-container form .right .form-group input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+  }
+
+  .container .video-upload-container form .right .form-group button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .error{
+    color: red;
+  }

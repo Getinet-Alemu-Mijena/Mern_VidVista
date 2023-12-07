@@ -1,0 +1,32 @@
+{% load static %}
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Success</title>
+  <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'VideoShare/css/SignUpSuccess.css' %}"
+    />
+</head>
+<body>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="success-container">
+        <i class="fas fa-check-circle success-icon"></i>
+        <div class="success-message">
+          <p>Your submission was successful!</p>
+          <p>Thank you for your participation.</p>
+          <p> Go back to  <a href="{%url 'SignIn' %}">login!</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

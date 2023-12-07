@@ -53,7 +53,7 @@ def SignUp(request):
         )
 
         # Redirect to a success page or login page
-        return render(request, 'VideoShare/SignUp.html')
+        return render(request, 'VideoShare/SignUpSuccess.html')
 
     return render(request, 'VideoShare/SignUp.html')
 
@@ -95,3 +95,21 @@ def Accounts(request):
         # Redirect to the login page
         return redirect('SignIn')  # Adjust 'login' to the actual name or URL of your login view
     return render(request, 'VideoShare/Account.html')
+
+def UploadVideo(request):
+     # Retrieve the username from the session variable
+    username = request.session.get('username')
+    if not username:
+        # Redirect to the login page
+        return redirect('SignIn')  # Adjust 'login' to the actual name or URL of your login view
+    return render(request, 'VideoShare/UploadVideo.html')
+
+def SignUpSuccess(request):
+     # Retrieve the username from the session variable
+    username = request.session.get('username')
+    if not username:
+        # Redirect to the login page
+        return redirect('SignIn')  # Adjust 'login' to the actual name or URL of your login view
+    return render(request, 'VideoShare/SignUpSuccess.html')
+    
+    

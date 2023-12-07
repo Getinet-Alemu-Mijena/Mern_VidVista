@@ -36,7 +36,7 @@ nav .logo h2 {
     background-color: black;
     width: 100%;
     height: 100vh;
-    margin-top: 65px;
+    margin-top: 45px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -45,7 +45,7 @@ nav .logo h2 {
 
 .mycontainer .form-container {
     width: 600px;
-    height: 500px;
+    height: 450px;
     margin-top: 20px;
     background-color: black;
     box-shadow: 0 0 10px rgba(111, 91, 91, 0.5);
