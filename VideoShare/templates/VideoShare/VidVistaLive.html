@@ -1,0 +1,84 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="shortcuts icon"
+      type="x-icon"
+      href="/thumbnails/favicon.png"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UploadVideo</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'VideoShare/css/VidVistaLive.css' %}"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/fontawesome.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/brands.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/solid.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="humburger"><i class="fas fa-bars" onclick=""></i></div>
+      <div class="logo">
+        <h2><i class="fa-brands fa-youtube"></i>VidVista</h2>
+      </div>
+
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search..." />
+        <button type="submit" class="search-button">Search</button>
+      </div>
+
+      <div class="link_container">
+        <ul>
+          <li>
+            <a href="#">
+              <i class="fas fa-microphone"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-film" id="create"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-bell"></i>
+            </a>
+          </li>
+
+          <div class="profile">
+            <img
+              id="clickableImage"
+              onclick="removeAbsoluteRight()"
+              src="{% static 'VideoShare/img/youtuber.jpeg' %}"
+            />
+          </div>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+        <div class="left">
+          <p>left</p>
+        </div>
+        <div class="right">
+            <p>right</p>
+        </div>
+    </div>
+    <script src="{% static 'VideoShare/js/VidVistaLive.js' %}"></script>
+  </body>
+</html>

@@ -2,6 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      rel="shortcuts icon"
+      type="x-icon"
+      href="/thumbnails/favicon.png"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WatchVideo</title>
@@ -63,10 +68,7 @@
       <div class="left">
         <div class="video-container">
           <video width="640" height="360" controls>
-            <source
-              src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
-              type="video/mp4"
-            />
+            <source src="{{ video.video.url }}" type="video/mp4">
             Your browser does not support the video tag.
           </video>
           <div class="video-title">
@@ -340,15 +342,25 @@
       </div>
 {% comment %} right container {% endcomment %}
       <div class="right">
+        {% for video in videos %}
         <div class="video-container1">
-          <div class="video">
-            <video width="640" height="360" controls>
-              <source
-                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
+          <div class="image">
+            <a href="{% url 'watch_video' video.id %}">
+              <img src="{{ video.thumbnail.url }}" alt="{{ video.title }}">
+          </a>
+          </div>
+        
+          <div class="description">
+            <label>Your browser does not support the video tag.</label>
+            <h3><a href="#">{{ video.title }}</a></h3>
+            <p>{{ video.subscribers }} subscribers</p>
+          </div>
+        </div>
+        {% endfor %}
+        
+        {% comment %} <div class="video-container1">
+          <div class="image">
+            <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
           </div>
 
           <div class="description">
@@ -358,14 +370,8 @@
           </div>
         </div>
         <div class="video-container1">
-          <div class="video">
-            <video width="640" height="360" controls>
-              <source
-                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
+          <div class="image">
+            <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
           </div>
 
           <div class="description">
@@ -375,14 +381,8 @@
           </div>
         </div>
         <div class="video-container1">
-          <div class="video">
-            <video width="640" height="360" controls>
-              <source
-                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
+          <div class="image">
+            <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
           </div>
 
           <div class="description">
@@ -392,14 +392,8 @@
           </div>
         </div>
         <div class="video-container1">
-          <div class="video">
-            <video width="640" height="360" controls>
-              <source
-                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
+          <div class="image">
+            <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
           </div>
 
           <div class="description">
@@ -409,14 +403,8 @@
           </div>
         </div>
         <div class="video-container1">
-          <div class="video">
-            <video width="640" height="360" controls>
-              <source
-                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
+          <div class="image">
+            <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
           </div>
 
           <div class="description">
@@ -426,14 +414,8 @@
           </div>
         </div>
         <div class="video-container1">
-          <div class="video">
-            <video width="640" height="360" controls>
-              <source
-                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
+          <div class="image">
+            <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
           </div>
 
           <div class="description">
@@ -443,14 +425,8 @@
           </div>
         </div>
         <div class="video-container1">
-          <div class="video">
-            <video width="640" height="360" controls>
-              <source
-                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
+          <div class="image">
+            <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
           </div>
 
           <div class="description">
@@ -460,14 +436,8 @@
           </div>
         </div>
         <div class="video-container1">
-          <div class="video">
-            <video width="640" height="360" controls>
-              <source
-                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
+          <div class="image">
+            <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
           </div>
 
           <div class="description">
@@ -477,14 +447,8 @@
           </div>
         </div>
         <div class="video-container1">
-          <div class="video">
-            <video width="640" height="360" controls>
-              <source
-                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
+          <div class="image">
+            <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
           </div>
 
           <div class="description">
@@ -492,24 +456,7 @@
             <h3><a href="#">Maraki English with abi Create</a></h3>
             <p>418K subscribers</p>
           </div>
-        </div>
-        <div class="video-container1">
-          <div class="video">
-            <video width="640" height="360" controls>
-              <source
-                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-
-          <div class="description">
-            <label>Your browser does not support the video tag.</label>
-            <h3><a href="#">Maraki English with abi Create</a></h3>
-            <p>418K subscribers</p>
-          </div>
-        </div>
+        </div> {% endcomment %}
       </div>
     </div>
   </body>

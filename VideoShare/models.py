@@ -26,3 +26,37 @@ class Account(models.Model):
 
     class Meta:
         db_table = 'account'
+
+class Video(models.Model):
+    video = models.FileField(upload_to='videos/')
+    title = models.CharField(max_length=255)
+    keywords = models.TextField()
+    thumbnail = models.ImageField(upload_to='thumbnails/')
+    description = models.TextField()
+    category = models.CharField(max_length=100, choices=[
+        ('music', 'Music'),
+        ('gaming', 'Gaming'),
+        ('travel', 'Travel'),
+        # Add more categories as needed
+    ])
+    privacy = models.CharField(max_length=50, choices=[
+        ('public', 'Public'),
+        ('private', 'Private'),
+        # Add more options as needed
+    ])
+    recording_date = models.DateField()
+    license = models.CharField(max_length=50, choices=[
+        ('all-rights-reserved', 'All Rights Reserved'),
+        ('cc-by', 'Creative Commons - Attribution'),
+        ('cc-by-sa', 'Creative Commons - Attribution-ShareAlike'),
+        ('public-domain', 'Public Domain'),
+        ('cc-by-nc', 'Creative Commons - Attribution-NonCommercial'),
+        ('cc-by-nc-sa', 'Creative Commons - Attribution-NonCommercial-ShareAlike'),
+        ('cc-by-nd', 'Creative Commons - Attribution-NoDerivs'),
+        # Add more options as needed
+    ])
+    start_time = models.DateTimeField(null=True, blank=True)
+    owner = models.ForeignKey(Account, on_delete=models.CASCADE, default=1)
+
+    def __str__(self):
+        return self.title

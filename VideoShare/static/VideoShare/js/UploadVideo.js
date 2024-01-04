@@ -100,21 +100,42 @@ document.addEventListener("DOMContentLoaded", function () {
       displayError(descriptionError, "Description shouldn't contain numbers or special character like @,@,$ etc.");
     }
     
-    const categoryInput = document.getElementById('category');
-    const categoryError = document.getElementById('category-error');
+    const categoryInput = document.getElementById("category");
+    const categoryError = document.getElementById("category-error");
 
-    if (categoryInput.value.length === ' ') {
+    if (categoryInput.value.length == 0) {
       isValid = false;
       displayError(categoryError, "This field is required.");
     }
-
     
     const privacyInput = document.getElementById('privacy');
     const privacyError = document.getElementById('privacy-error');
 
-    if (privacyInput.value.length === ' ') {
+    if (privacyInput.value.length == 0) {
       isValid = false;
       displayError(privacyError, "This field is required.");
+    }
+
+    const recordingDateInput = document.getElementById("recordingDate");
+    const recordingDateError = document.getElementById("recordingDate-error");
+    if(recordingDateInput.value.length == 0){
+      isValid = false;
+      displayError(recordingDateError,"This field is required");
+    }
+
+
+    const licenseInput = document.getElementById("license");
+    const licenseError = document.getElementById("license-error");
+    if(licenseInput.value.length == 0){
+      isValid = false;
+      displayError(licenseError,"This field is required");
+    }
+
+    const startTimeInput = document.getElementById("start-time");
+    const startTimeError = document.getElementById("start-time-error");
+    if(startTimeInput.value.length == 0){
+      isValid = false;
+      displayError(startTimeError,"This field is required");
     }
 
     if (isValid) {

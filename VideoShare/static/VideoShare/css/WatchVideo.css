@@ -425,16 +425,19 @@ nav ul li a:hover {
     margin-top: 20px;
 }
 
-.container1 .right .video-container1 .video{
+.container1 .right .video-container1 .image{
     width: 50%;
     height: 200px;
     cursor: pointer;
+    margin-right: 10px;
+    border-radius: 12px;
 }
 
-.container1 .right .video-container1 .video video{
+.container1 .right .video-container1 .image img{
     width: 100%;
     height: 200px;
     cursor: pointer;
+    border-radius: 12px;
 }
 
 .container1 .right .video-container1 .description{

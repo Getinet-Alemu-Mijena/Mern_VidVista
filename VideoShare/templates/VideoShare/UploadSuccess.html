@@ -1,0 +1,37 @@
+{% load static %}
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link
+  rel="shortcuts icon"
+  type="x-icon"
+  href="/thumbnails/favicon.png"
+/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UploadSuccess</title>
+  <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'VideoShare/css/UploadSuccess.css' %}"
+    />
+</head>
+<body>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="success-container">
+        <i class="fas fa-check-circle success-icon"></i>
+        <div class="success-message">
+          <p>Your submission was successful!</p>
+          <p>Thank you for your participation.</p>
+          <p> Go back to  <a href="{%url 'home' %}">Home!</a> Or <a href="{%url 'UploadVideo' %}">UploadVideo!</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

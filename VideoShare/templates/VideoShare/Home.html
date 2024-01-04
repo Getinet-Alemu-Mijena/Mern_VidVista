@@ -2,6 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      rel="shortcuts icon"
+      type="x-icon"
+      href="/thumbnails/favicon.png"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
@@ -30,22 +35,26 @@
     <nav>
       <div class="humburger"><i class="fas fa-bars" onclick=""></i></div>
       <div class="logo">
-        <h2><i class="fa-brands fa-youtube"></i>VidVista</h2>
+        <h2><a href="{% url 'home' %}"><i class="fa-brands fa-youtube"></i>VidVista</a></h2>
       </div>
 
-      <div class="search-container">
-        <input type="text" class="search-input" placeholder="Search..." />
-        <button type="submit" class="search-button">Search</button>
-      </div>
-
+      <!-- VideoShare/templates/VideoShare/Home.html -->
+<div class = "search-container">
+  <form action="{% url 'search_result' %}" method="get">
+    <input type="text" name="q" class="search-input" placeholder="Search..." />
+    <button type="submit" class="search-button">Search</button>
+  </form>
+</div>
       <div class="link_container">
         <ul>
-          <li>
-            <a href="#">
-                <i class="fas fa-microphone"></i>
-                {% comment %} <span>Search width Your voice.</span> {% endcomment %}
-            </a>
-        </li>
+         <!-- Inside your navigation bar -->
+<li>
+  <a href="#" id="voice-search-btn">
+      <i class="fas fa-microphone"></i>
+      <span>Search with Your voice.</span>
+  </a>
+</li>
+
         <li>
             <a href="#">
                 <i class="fas fa-film" id = "create"></i>
@@ -72,7 +81,7 @@
     <div class="container">
       <div class="left-side">
         <ul>
-          <li><i class="fas fa-home"></i><a href="#">Home</a></li>
+          <li><i class="fas fa-home"></i><a href="{% url 'home' %}">Home</a></li>
           <li><i class="fas fa-video"></i><a href="#">Shorts</a></li>
           <li><i class="fas fa-video"></i><a href="#">Subscription</a></li>
         </ul>
@@ -203,16 +212,103 @@
         </div>
         <div class="flex-item">
          <i class="fas fa-broadcast-tower"></i>
-         <a href "#">Go Live</a>
+         <a href = "{% url 'VidVistaLive' %}">Go Live</a>
         </div>
      </div>
 
-     <div class="notifiction">
-      <div class="notifiction">
+     <div class="audio-to-text" id="audio-to-text">
+      <p id="status">Click the microphone icon to start recording...</p>
+      <button id="recordButton">Start Recording</button>
+  </div>
+
+     <div class="main-container">
+      <div class="top-bar">
+        <label>Notification</label>
+        <a href = "#"><i class="fas fa-cog"></i></a>
       </div>
-      <div class="notifiction">
+      <div class="notification">
+        <div class="channel-name">
+          <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
+        </div>
+        <div class="description">
+          <h1>Man City is live: MATCHDAY LIVE! | Red Star v Man City | UEFA Champions League</h1>
+          <p>19 hours ago</p>
+        </div>
+        <div class="thumbnail">
+          <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
+        </div>
+      </div> 
+      <div class="notification">
+        <div class="channel-name">
+          <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
+        </div>
+        <div class="description">
+          <h1>Man City is live: MATCHDAY LIVE! | Red Star v Man City | UEFA Champions League</h1>
+          <p>19 hours ago</p>
+        </div>
+        <div class="thumbnail">
+          <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
+        </div>
       </div>
-      <div class="notifiction">
+      <div class="notification">
+        <div class="channel-name">
+          <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
+        </div>
+        <div class="description">
+          <h1>Man City is live: MATCHDAY LIVE! | Red Star v Man City | UEFA Champions League</h1>
+          <p>19 hours ago</p>
+        </div>
+        <div class="thumbnail">
+          <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
+        </div>
+      </div>
+      <div class="notification">
+        <div class="channel-name">
+          <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
+        </div>
+        <div class="description">
+          <h1>Man City is live: MATCHDAY LIVE! | Red Star v Man City | UEFA Champions League</h1>
+          <p>19 hours ago</p>
+        </div>
+        <div class="thumbnail">
+          <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
+        </div>
+      </div>
+      <div class="notification">
+        <div class="channel-name">
+          <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
+        </div>
+        <div class="description">
+          <h1>Man City is live: MATCHDAY LIVE! | Red Star v Man City | UEFA Champions League</h1>
+          <p>19 hours ago</p>
+        </div>
+        <div class="thumbnail">
+          <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
+        </div>
+      </div>
+      <div class="notification">
+        <div class="channel-name">
+          <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
+        </div>
+        <div class="description">
+          <h1>Man City is live: MATCHDAY LIVE! | Red Star v Man City | UEFA Champions League</h1>
+          <p>19 hours ago</p>
+        </div>
+        <div class="thumbnail">
+          <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
+        </div>
+      </div>
+      <div class="notification">
+        <div class="channel-name">
+          <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
+        </div>
+        <div class="description">
+          <h1>Man City is live: MATCHDAY LIVE! | Red Star v Man City | UEFA Champions League</h1>
+          <p>19 hours ago</p>
+        </div>
+        <div class="thumbnail">
+          <img src="/thumbnails/Examination_Page_-_Google_Chrome_12_24_2022_2_34_59_PM.png" alt="value" />
+        </div>
       </div>
      </div>
 
@@ -241,298 +337,31 @@
         </div>
         <hr />
         <div class="sub-container">
+          {% for video in videos %}
           <div class="video-container">
-            {% comment %} <video width="640" height="360" controls>
-              <source
-                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video> {% endcomment %}
-          <div class="thumbnail">
-            <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
-          </div>
-            <div class="video-description">
-              <div class="user-photo">
-                <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
+              <div class="thumbnail">
+                <a href="{% url 'watch_video' video.id %}">
+                  <img src="{{ video.thumbnail.url }}" alt="{{ video.title }}">
+              </a>
               </div>
-
-              <div class="video-detail">
-                <a href="#">
-                  <h2>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </h2></a
-                >
-                <a href="#">
-                  <p>Channel</p>
-                </a>
-                <a href="#">
-                  <p>75K views 19 hours ago</p>
-                </a>
+              <div class="video-description">
+                  <div class="user-photo">
+                    <img src="{{ video.thumbnail.url }}" alt="{{ video.title }}" />
+                  </div>
+                  <div class="video-detail">
+                      <a href="#">
+                          <h2>{{ video.title }}</h2>
+                      </a>
+                      <a href="#">
+                          <p>{{ video.category }}</p>
+                      </a>
+                      <a href="#">
+                          <p>{{ video.recording_date }}</p>
+                      </a>
+                  </div>
               </div>
-            </div>
           </div>
-
-          <div class="video-container">
-            {% comment %} <video width="640" height="360" controls>
-              <source
-                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video> {% endcomment %}
-          <div class="thumbnail">
-            <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
-          </div>
-            <div class="video-description">
-              <div class="user-photo">
-                <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
-              </div>
-
-              <div class="video-detail">
-                <a href="#">
-                  <h2>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </h2></a
-                >
-                <a href="#">
-                  <p>Channel</p>
-                </a>
-                <a href="#">
-                  <p>75K views 19 hours ago</p>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="video-container">
-            {% comment %} <video width="640" height="360" controls>
-              <source
-                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video> {% endcomment %}
-          <div class="thumbnail">
-            <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
-          </div>
-            <div class="video-description">
-              <div class="user-photo">
-                <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
-              </div>
-
-              <div class="video-detail">
-                <a href="#">
-                  <h2>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </h2></a
-                >
-                <a href="#">
-                  <p>Channel</p>
-                </a>
-                <a href="#">
-                  <p>75K views 19 hours ago</p>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="video-container">
-            {% comment %} <video width="640" height="360" controls>
-              <source
-                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video> {% endcomment %}
-          <div class="thumbnail">
-            <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
-          </div>
-            <div class="video-description">
-              <div class="user-photo">
-                <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
-              </div>
-
-              <div class="video-detail">
-                <a href="#">
-                  <h2>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </h2></a
-                >
-                <a href="#">
-                  <p>Channel</p>
-                </a>
-                <a href="#">
-                  <p>75K views 19 hours ago</p>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="video-container">
-            {% comment %} <video width="640" height="360" controls>
-              <source
-                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video> {% endcomment %}
-          <div class="thumbnail">
-            <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
-          </div>
-            <div class="video-description">
-              <div class="user-photo">
-                <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
-              </div>
-
-              <div class="video-detail">
-                <a href="#">
-                  <h2>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </h2></a
-                >
-                <a href="#">
-                  <p>Channel</p>
-                </a>
-                <a href="#">
-                  <p>75K views 19 hours ago</p>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="video-container">
-            {% comment %} <video width="640" height="360" controls>
-              <source
-                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video> {% endcomment %}
-          <div class="thumbnail">
-            <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
-          </div>
-            <div class="video-description">
-              <div class="user-photo">
-                <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
-              </div>
-
-              <div class="video-detail">
-                <a href="#">
-                  <h2>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </h2></a
-                >
-                <a href="#">
-                  <p>Channel</p>
-                </a>
-                <a href="#">
-                  <p>75K views 19 hours ago</p>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="video-container">
-            {% comment %} <video width="640" height="360" controls>
-              <source
-                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video> {% endcomment %}
-          <div class="thumbnail">
-            <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
-          </div>
-            <div class="video-description">
-              <div class="user-photo">
-                <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
-              </div>
-
-              <div class="video-detail">
-                <a href="#">
-                  <h2>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </h2></a
-                >
-                <a href="#">
-                  <p>Channel</p>
-                </a>
-                <a href="#">
-                  <p>75K views 19 hours ago</p>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="video-container">
-            {% comment %} <video width="640" height="360" controls>
-              <source
-                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video> {% endcomment %}
-          <div class="thumbnail">
-            <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
-          </div>
-            <div class="video-description">
-              <div class="user-photo">
-                <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
-              </div>
-
-              <div class="video-detail">
-                <a href="#">
-                  <h2>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </h2></a
-                >
-                <a href="#">
-                  <p>Channel</p>
-                </a>
-                <a href="#">
-                  <p>75K views 19 hours ago</p>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="video-container">
-            {% comment %} <video width="640" height="360" controls>
-              <source
-                src="{% static 'VideoShare/video/#በህይወቴ_በኑሮዬ_ጣልቃ_እየገባ Gospel singer Zerfe Kebede live worship __ Prophet Mesfin Beshu __.mp4'%}"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video> {% endcomment %}
-          <div class="thumbnail">
-            <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
-          </div>
-            <div class="video-description">
-              <div class="user-photo">
-                <img src="{% static 'VideoShare/img/youtuber.jpeg' %}" />
-              </div>
-
-              <div class="video-detail">
-                <a href="#">
-                  <h2>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </h2></a
-                >
-                <a href="#">
-                  <p>Channel</p>
-                </a>
-                <a href="#">
-                  <p>75K views 19 hours ago</p>
-                </a>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </div>
